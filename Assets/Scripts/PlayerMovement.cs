@@ -18,6 +18,8 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float CameraZoffset;
     [SerializeField] private float senstivity;
 
+    [SerializeField] private Animator _animator;
+
     bool isGrounded;
     Vector3 velocity;
 
@@ -36,6 +38,7 @@ public class PlayerMovement : MonoBehaviour
         Vector3 move = transform.right * x + transform.forward * z;
 
         characterController.Move(move * moveSpeed * Time.deltaTime);
+        _animator.SetFloat("Speed", (move * moveSpeed * Time.deltaTime).magnitude);
 
         isGrounded = Physics.CheckSphere(GroundCheck.position, groundDistance, GroundLayer);
 

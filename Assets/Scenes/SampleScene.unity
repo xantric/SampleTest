@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 2548717}
   - component: {fileID: 2548716}
   - component: {fileID: 2548715}
+  - component: {fileID: 2548719}
   m_Layer: 6
   m_Name: Plane
   m_TagString: Untagged
@@ -228,6 +229,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2548719
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2548714}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 63eec519867f1a244be367f8ed8e84dc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &230618938
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,6 +649,7 @@ MonoBehaviour:
   CameraYoffset: 0
   CameraZoffset: 0
   senstivity: 0
+  _animator: {fileID: 0}
 --- !u!143 &1304461195
 CharacterController:
   m_ObjectHideFlags: 0
@@ -753,7 +776,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 604e968d66638a140afe72fda5fae500, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -2.11
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 604e968d66638a140afe72fda5fae500, type: 3}
       propertyPath: m_LocalPosition.y
@@ -823,6 +846,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 604e968d66638a140afe72fda5fae500, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1488391249}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 604e968d66638a140afe72fda5fae500, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1488391252}
   m_SourcePrefab: {fileID: 100100000, guid: 604e968d66638a140afe72fda5fae500, type: 3}
 --- !u!1 &1488391247 stripped
 GameObject:
@@ -847,7 +873,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 1488391250}
-  moveSpeed: 10
+  moveSpeed: 5
   gravity: -9.81
   jumpHeight: 2
   groundDistance: 0.2
@@ -859,6 +885,7 @@ MonoBehaviour:
   CameraYoffset: 0
   CameraZoffset: 0
   senstivity: 0
+  _animator: {fileID: 1488391252}
 --- !u!143 &1488391250
 CharacterController:
   m_ObjectHideFlags: 0
@@ -908,6 +935,27 @@ CapsuleCollider:
   m_Height: 1.88
   m_Direction: 1
   m_Center: {x: 0, y: 0.93, z: 0}
+--- !u!95 &1488391252
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1488391247}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8a625cd3f8b15fc4db55f1b223f8b1a1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
